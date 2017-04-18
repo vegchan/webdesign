@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="home-event">
+    <h1>EVENTS AND ACTIVITIES</h1>
+    <div class="home-event__desc">
+      <p>
+        Attend a seminar on setting up your bank account or learn ballroom dancing. Try a yoga session or enjoy a major concert featuring a world-renowned performer. Celebrate cultural diversity during the University’s two-month-long early spring Carnevale celebration. Your academic pursuits and life experience at Northeastern will be enriched and shaped by the activities you choose, the clubs you join, and the life-long friends you make here. So get involved, contribute your energy, experience, and enjoy!
+      </p>
+      <p>
+        You can find all our events and more on our monthly OGS Newsletter. Click <a href="#">here</a> to join our mailing list.
+      </p>
+    </div>
+  </div>
+  <div class="home-calendar">
+    <div ui-calendar="home.uiConfig.calendar" class="span8 calendar" ng-model="home.eventSources" ></div>
+  </div>
+  <div class="home-gallery">
+      <div class="col-lg-3">
+        <h3>Photo Gallery</h3>
+        <div class="">
+          The OGS is a wonderful office that is always super helpful. In my experience, there is so much paperwork that we international students have to complete and submit. This office has been so helpful and resourceful with all my paperwork and willing to take the time to explain and help me.
+        </div>
+      </div>
+      <div class="col-lg-9">
+        <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+          <div uib-slide ng-repeat="slide in home.slides track by slide.id" index="slide.id">
+            <img ng-src="{{slide.image}}" style="margin:auto;">
+            <div class="carousel-caption">
+              <h4>Slide {{slide.id}}</h4>
+              <p>{{home.slide.text}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="clear: both"></div>
+  </div>
+</div>
